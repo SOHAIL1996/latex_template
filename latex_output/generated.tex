@@ -1,0 +1,196 @@
+\documentclass[10pt]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{color,xcolor}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{titlesec}
+\usepackage{draftwatermark}
+\usepackage{fancyhdr}      
+\usepackage{datetime}      
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{ltablex}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Watermark setup
+\SetWatermarkText{CONFIDENTIAL}
+\SetWatermarkScale{0.5}
+\SetWatermarkColor[gray]{0.82}
+\SetWatermarkAngle{45}
+
+% Define colors
+\definecolor{primary_color}{HTML}{0E267F}
+\definecolor{lightgray}{gray}{0.7}
+
+% Section style
+\titleformat{\section}[block] 
+  {\color{primary_color}\normalfont\normalsize\bfseries\center}
+  {\color{primary_color}\thesection}{1em}{\MakeUppercase}
+
+
+% Remove page numbering
+\pagenumbering{gobble}
+
+% Row size
+\keepXColumns
+\arrayrulecolor{lightgray}
+\renewcommand{\arraystretch}{1.5}
+
+% Header & Footer setup
+\pagestyle{fancy}
+\fancyhead[C]{ \textcolor{primary_color}{Robot Diagnosis}  }
+\fancyhead[R]{\includegraphics[width=0.05\textwidth]{ latex_assets/logo.png }}
+\fancyfoot[C]{ \textcolor{primary_color}{SOHAIL INC.} }
+\fancyfoot[R]{
+  \textbf{\textcolor{black}{Date:} }
+  {\textcolor{gray}{\today}}
+}
+
+\setlength{\headheight}{33pt}   % Space reserved for header
+\setlength{\headsep}{32pt}      % Space between header and text
+\setlength{\footskip}{22pt}     % Space between text and footer
+
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyfoot[C]{ \textcolor{primary_color}{SOHAIL INC.} }
+  \fancyfoot[R]{
+    \textbf{\textcolor{black}{Date:} }
+    {\textcolor{gray}{\today}}
+  }
+  \renewcommand{\headrulewidth}{0pt}
+  
+  \setlength{\headheight}{0pt}
+  \setlength{\headsep}{0pt}
+}
+
+
+% Grey horizontal lines for header and footer
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% Header rule with space below
+\renewcommand{\headrule}{%
+  \color{lightgray}\hrule width\headwidth height\headrulewidth \vspace{8pt}
+}
+
+% Footer rule with space above
+\renewcommand{\footrule}{%
+  \color{lightgray}\vspace{8pt}\hrule width\headwidth height\footrulewidth
+}
+
+\begin{document}
+%  ------------------------------------------------ Header and Title
+
+% Remove header first page
+\thispagestyle{firstpage}
+
+% Title Center & Logo aligned top-right
+\begin{flushright}
+    \includegraphics[width=0.1\textwidth]{ latex_assets/logo.png }
+\end{flushright}
+
+\vspace{-3.5em}
+
+% Title centered, uppercase, with grey underline
+\begin{center}
+    {\Huge \textcolor{primary_color}{\textbf{\MakeUppercase{ Robot Diagnosis }}}} \\[0.3em]
+    \textcolor{lightgray}{\rule{\textwidth}{1pt}} % horizontal grey line under title
+\end{center}
+
+% Author and Description Table
+\vspace{1cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3cm} X >{\raggedright\arraybackslash}p{3cm} X}
+  \textbf{\textcolor{primary_color}{INCHARGE}} & Salman Omar Sohail &
+  \textbf{\textcolor{primary_color}{ROBOT ID}} & XXXX-1234 \\
+\end{tabularx}
+
+\vspace{1cm}
+
+\section*{Summary}
+
+\noindent
+Velit adipisci tempora labore dolor sed tempora quaerat. Etincidunt voluptatem magnam ipsum ipsum sit. Velit quisquam adipisci neque sit. Dolor est sit neque. Porro modi sed adipisci aliquam amet velit. Sit quaerat quaerat eius dolore tempora dolore eius. Amet quaerat non porro aliquam adipisci velit. Ut sit modi tempora neque. Tempora sit adipisci tempora dolorem eius.\vspace{0.5cm}Dolorem amet non quiquia sit magnam quaerat. Etincidunt consectetur ipsum quisquam amet neque tempora modi. Etincidunt neque dolore ipsum. Amet est eius non. Porro etincidunt amet neque quaerat velit sed. Magnam sed non neque consectetur eius. Quisquam dolor dolore sed ut adipisci.
+
+%  ------------------------------------------------ Data Table
+
+\section*{Data Table}
+
+\begin{tabularx}{\textwidth}{p{11cm}|c|X}
+  \rowcolor{gray!35}
+  \textbf{\textcolor{primary_color}{COMPONENTS}} 
+  & \textbf{\textcolor{primary_color}{QUANTITY}} 
+  & \textbf{\textcolor{primary_color}{PRICE}} \\
+  \hline
+  \endfirsthead
+
+  \rowcolor{gray!35}
+  \textbf{\textcolor{primary_color}{Item}} & \textbf{\textcolor{primary_color}{Quantity}} & \textbf{\textcolor{primary_color}{Price}} \\
+  \hline
+  \endhead
+
+  \endfoot
+
+  \endlastfoot
+
+  Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+Laptop & 2 & \$1200 \\
+Monitor & 3 & \$300 \\
+Keyboard & 5 & \$50 \\
+Laptop & 2 & \$1200 \\
+\end{tabularx}
+
+
+%  ------------------------------------------------ Signature Section
+\vspace{2cm}  
+
+\noindent
+\begin{minipage}[t]{0.35\textwidth}
+  \hrulefill  
+\end{minipage}
+\\
+\vspace{1cm}
+\small{\textbf{DATE / PLACE / SIGNATURE}}
+
+
+\end{document}
